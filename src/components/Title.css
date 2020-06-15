@@ -1,0 +1,16 @@
+.Title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .Title h3 {
+    font-size: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+  .Title div {
+    width: 5rem;
+    height: 5px;
+    margin: 0 auto;
+    background: var(--primaryColor);
+  }

@@ -1,0 +1,76 @@
+.Room {
+    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s linear;
+  }
+  /* .Room:hover {
+    box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  } */
+  
+  .Room-img-container {
+    position: relative;
+  }
+  .Room-img-container img {
+    width: 100%;
+    display: block;
+    transition: all 0.3s linear;
+  }
+  .Room-price {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--mainWhite);
+    padding: 0.3rem 0.6rem 0.5rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+    transition: all 0.3s linear;
+    color: white;
+  }
+  .Room-price h6 {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+  .Room-link {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #af9a7d;
+    padding: 0.4rem 0.9rem;
+    border: 3px solid #af9a7d;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transition: all 0.3s linear;
+  }
+  .Room-link:hover {
+    background: transparent;
+    color: #af9a7d;
+  }
+  .Room-img-container:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .Room-img-container:hover img {
+    opacity: 0.3;
+  }
+  .Room-img-container:hover .Room-price {
+    opacity: 0;
+  }
+  .Room-img-container:hover .Room-link {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .Room h4 {
+    background-color: #cfcfcf;
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+  }

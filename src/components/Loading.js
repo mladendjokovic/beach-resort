@@ -1,0 +1,14 @@
+import React from "react";
+import './Loading.css';
+
+import loadingGif from "../images/gif/loading-gear.gif";
+const Loading = () => {
+  return (
+    <div className="Loading">
+      <h4>rooms data loading....</h4>
+      <img src={loadingGif} alt="" />
+    </div>
+  );
+};
+
+export default Loading;
