@@ -3,18 +3,35 @@ import {RoomContext} from '../context'
 import './Filter.css'
 import Title from './Title'
 
+
+
 export default class Filter extends Component {
     static contextType = RoomContext
+    state = {openRoomSelect: false, openCapacitySelect: false}
+    handleOpenRoom = () => {
+        this.setState({openRoomSelect: true})
+    }
+    handleOpenCapacity = () => {
+        this.setState({openCapacitySelect: true})
+    }
+    handleCloseCapacity = () => {
+        this.setState({openCapacitySelect: false})
+    }
+    handleCloseRoom = () => {
+    this.setState({openRoomSelect: false})
+    }
     render() {
         let {rooms, type, changeHandle,capacity, maxPrice, price, minPrice, breakfast, pets} = this.context
         const types = ['all',...new Set(rooms.map(room => room.type))]
         let typesOption = types.map((option,index) => 
             (<option key={index} value={option}>{option}</option>)
         )
+        
         const capacityArr = [...new Set(rooms.map(room => room.capacity))]
         const capacityOptions = capacityArr.map((option,index) => 
              (<option key={index} value={option}>{option}</option>)
-        )
+        ) 
+     
         return (
             <section className="Filter">
             <Title name="search rooms" />
@@ -42,8 +59,8 @@ export default class Filter extends Component {
                         <input type="checkbox" id="breakfast" name="breakfast" checked={breakfast} onChange={changeHandle}/>
                         <label htmlFor="breakfast">breakfast included</label>
                         </div>
-                        <div className="single-extra">
-                        <input type="checkbox" id="pets" name="pets" checked={pets} onChange={changeHandle}/>
+                        <div className="single-extra"> 
+                        <input type="checkbox" id="pets" name="pets" checked={pets} onChange={changeHandle}/> 
                         <label htmlFor="pets">Pets allowed</label>
                         </div>
                     </div>
